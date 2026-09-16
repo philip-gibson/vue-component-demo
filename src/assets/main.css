@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 /* @import 'primeicons/primeicons.css'; */
-/* color palette from <https://github.com/vuejs/theme> */
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 @import "tailwindcss";
 
@@ -13,11 +9,11 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  position: relative;
   font-weight: normal;
 }
 
 #app {
+  height: 100vh;
   margin: 0 auto;
   font-weight: normal;
 }
