@@ -1,5 +1,8 @@
 export const RouteNames = {
-  home:     'HOME',
-  notFound: 'NOT_FOUND',
-  notKnown: 'NOT_KNOWN',
+  home:       'HOME',
+  inputs:     'INPUTS',
+  notFound:   'NOT_FOUND',
+  notKnown:   'NOT_KNOWN',
+  primevue:   'PRIMEVUE',
+  salesforce: 'SALESFORCE',
 } as const
