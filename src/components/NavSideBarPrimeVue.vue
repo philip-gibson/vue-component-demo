@@ -13,15 +13,15 @@
 
   const route = useRoute()
 
-  const navBarTab = computed(() => route?.meta?.navBarTab)
+  const selected = computed(() => route?.meta?.navBarTab === 'primevue')
 </script>
 
 <template>
   <li class="px-[0.5rem]">
     <RouterLink :to="{ name: RouteNames.primevue }" class="no-underline">
-      <NavSideBarTab :selected="navBarTab === 'primevue'" class="justify-start">
-        <IconPrime class="text-cyan-500 group-hover:text-emerald-100" size="24" />
-        <NavSideBarText v-if="!collapsed">
+      <NavSideBarTab :selected="selected" class="justify-start">
+        <IconPrime :class="{ 'text-emerald-100': selected }" class="text-cyan-500 group-hover:text-emerald-100" size="24" />
+        <NavSideBarText v-if="!collapsed" :selected="selected">
           PrimeVue
         </NavSideBarText>
       </NavSideBarTab>
