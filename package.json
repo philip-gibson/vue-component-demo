@@ -12,10 +12,13 @@
     "@primeicons/vue": "^8.0.1",
     "@primeuix/themes": "^3.0.1",
     "@tailwindcss/vite": "^4.3.3",
+    "@vuepic/vue-datepicker": "^11.0.3",
     "@vueuse/core": "^15.0.0",
+    "dayjs": "^1.11.23",
     "pinia": "^4.0.3",
     "primevue": "^5.0.1",
     "tailwindcss": "^4.3.3",
+    "vee-validate": "^4.15.1",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1"
   },
