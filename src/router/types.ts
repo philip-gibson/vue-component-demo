@@ -5,4 +5,5 @@ export const RouteNames = {
   notKnown:   'NOT_KNOWN',
   primevue:   'PRIMEVUE',
   salesforce: 'SALESFORCE',
+  stories:    'STORIES',
 } as const
