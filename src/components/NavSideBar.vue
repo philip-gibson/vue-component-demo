@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { storeToRefs } from 'pinia'
-  import IconAngleLeft from '@primeicons/vue/angle-left';
+  import IconAngleLeft from '@primeicons/vue/angle-left'
+  import ButtonDarkMode from './ButtonDarkMode.vue'
   import NavSideBarHome from '@/components/NavSideBarHome.vue'
   import NavSideBarInputs from '@/components/NavSideBarInputs.vue'
   import NavSideBarPrimeVue from '@/components/NavSideBarPrimeVue.vue'
@@ -19,7 +20,8 @@
 <template>
   <nav
     :class="[isCollapsed ? 'w-[4rem]' : 'w-[15rem]']"
-    class="relative flex flex-col items-center h-full py-[1.5rem] transition-all ease-in duration-[360ms] bg-cyan-600 shadow-xl/30">
+    class="relative flex flex-col items-center h-full py-[0.75rem] transition-all ease-in duration-[360ms] bg-cyan-600 shadow-xl/30">
+    <ButtonDarkMode />
     <button
       class="flex absolute right-[-0.75rem] top-[1rem] h-[1.5rem] w-[1.5rem] items-center justify-center
         rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-xl cursor-pointer"
