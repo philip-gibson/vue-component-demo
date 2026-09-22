@@ -5,6 +5,7 @@
   import NavSideBarInputs from '@/components/NavSideBarInputs.vue'
   import NavSideBarPrimeVue from '@/components/NavSideBarPrimeVue.vue'
   import NavSideBarSalesforce from '@/components/NavSideBarSalesforce.vue'
+  import NavSideBarStories from '@/components/NavSideBarStories.vue'
   import { useNavSideBarStore } from '@/stores/navSideBar'
 
   export interface NavSideBarState {
@@ -32,6 +33,7 @@
         <NavSideBarInputs :collapsed="isCollapsed" />
         <NavSideBarPrimeVue :collapsed="isCollapsed" />
         <NavSideBarSalesforce :collapsed="isCollapsed" />
+        <NavSideBarStories :collapsed="isCollapsed" />
       </ul>
     </div>
   </nav>

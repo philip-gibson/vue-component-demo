@@ -30,6 +30,12 @@ const routes: RouteRecordRaw[] = [
         meta: { navBarTab: 'salesforce', title: 'PrimeVue' },
         name: RouteNames.salesforce,
       },
+      {
+        path: 'stories',
+        component: () => import('@/views/Stories.vue'),
+        meta: { navBarTab: 'stories', title: 'Stories' },
+        name: RouteNames.stories,
+      },
     ],
   },
   {
