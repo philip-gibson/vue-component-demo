@@ -1,6 +1,8 @@
 <script lang="ts" setup>
   import Panel, { type PanelPassThroughOptions } from 'primevue/panel'
   import { ref } from 'vue'
+  import ChevronDown from '@primeicons/vue/chevron-down'
+  import ChevronUp from '@primeicons/vue/chevron-up'
 
   defineProps<{
     pt: PanelPassThroughOptions
@@ -13,9 +15,8 @@
 
 <template>
   <Panel
-    :class="{ '!border-gray-50 !bg-gray-50': !collapsedPanel }"
+    :class="[ collapsedPanel ? 'dark:!bg-gray-800' : '!border-gray-50 !bg-gray-50 dark:!border-gray-700 dark:!bg-gray-700' ]"
     :pt="pt"
-    class="w-full"
     :collapsed="collapsedPanel"
     toggleable
     @update:collapsed="collapsedPanel = $event">
@@ -31,8 +32,8 @@
       </div>
     </template>
     <template #toggleicon="{ collapsed }">
-      <i v-if="collapsed" class="pi pi-chevron-down !text-[0.875rem]"></i>
-      <i v-else class="pi pi-chevron-up !text-[0.875rem]"></i>
+      <ChevronDown v-if="collapsed" size="16" />
+      <ChevronUp v-else size="16" />
     </template>
     <slot></slot>
   </Panel>

@@ -13,16 +13,16 @@
 
   const route = useRoute()
 
-  const selected = computed(() => route?.meta?.navBarTab === 'stories')
+  const selected = computed(() => route?.meta?.navBarTab === 'events')
 </script>
 
 <template>
   <li class="px-[0.5rem]">
-    <RouterLink :to="{ name: RouteNames.stories }" class="no-underline">
+    <RouterLink :to="{ name: RouteNames.events }" class="no-underline">
       <NavSideBarTab :selected="selected" class="justify-start">
         <IconBook :class="{ 'text-emerald-100': selected }" class="text-cyan-500 group-hover:text-emerald-100" size="24" />
         <NavSideBarText v-if="!collapsed" :selected="selected">
-          Stories
+          Events
         </NavSideBarText>
       </NavSideBarTab>
     </RouterLink>

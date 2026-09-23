@@ -9,17 +9,17 @@ import type { App } from 'vue'
 const upMetricsPreset = definePreset(Aura, {
   semantic: {
     primary: {
-      50: 'light-dark({orange.50}, {indigo.50})',
-      100: 'light-dark({orange.100}, {indigo.100})',
-      200: 'light-dark({orange.200}, {indigo.200})',
-      300: 'light-dark({orange.300}, {indigo.300})',
-      400: 'light-dark({orange.400}, {indigo.400})',
-      500: 'light-dark({orange.500}, {indigo.500})',
-      600: 'light-dark({orange.600}, {indigo.600})',
-      700: 'light-dark({orange.700}, {indigo.700})',
-      800: 'light-dark({orange.800}, {indigo.800})',
-      900: 'light-dark({orange.900}, {indigo.900})',
-      950: 'light-dark({orange.950}, {indigo.950})'
+      50: 'light-dark({blue.50}, {orange.50})',
+      100: 'light-dark({blue.100}, {orange.100})',
+      200: 'light-dark({blue.200}, {orange.200})',
+      300: 'light-dark({blue.300}, {orange.300})',
+      400: 'light-dark({blue.400}, {orange.400})',
+      500: 'light-dark({blue.500}, {orange.500})',
+      600: 'light-dark({blue.600}, {orange.600})',
+      700: 'light-dark({blue.700}, {orange.700})',
+      800: 'light-dark({blue.800}, {orange.800})',
+      900: 'light-dark({blue.900}, {orange.900})',
+      950: 'light-dark({blue.950}, {orange.950})'
     },
     surface: {
         0: '#ffffff',
