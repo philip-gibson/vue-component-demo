@@ -31,7 +31,7 @@
             <slot name="filter-params"></slot>
           </div>
         </template>
-        <div class="flex min-h-0 flex-1 flex-col overflow-y-auto border-l border-gray-100 p-[1rem]">
+        <div class="flex min-h-0 flex-1 flex-col overflow-y-auto border-l border-gray-100 dark:bg-gray-700 p-[1rem]">
           <!-- zero-state -->
           <template v-if="$slots['zero-state']">
             <div class="flex h-full w-full flex-col items-start justify-start">

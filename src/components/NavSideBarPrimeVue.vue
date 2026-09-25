@@ -1,15 +1,14 @@
 <script lang="ts" setup>
+  import { storeToRefs } from 'pinia'
   import { computed } from 'vue'
   import { useRoute } from 'vue-router'
   import IconPrime from '@primeicons/vue/prime';
   import NavSideBarTab from '@/components/NavSideBarTab.vue'
   import NavSideBarText from '@/components/NavSideBarText.vue'
-  import type { NavSideBarState } from '@/components/NavSideBar.vue'
   import { RouteNames } from '@/router/types'
+  import { useNavSideBarStore } from '@/stores/navSideBar'
 
-  withDefaults(defineProps<NavSideBarState>(), {
-    collapsed: false,
-  })
+  const { isCollapsed } = storeToRefs(useNavSideBarStore())
 
   const route = useRoute()
 
@@ -21,7 +20,7 @@
     <RouterLink :to="{ name: RouteNames.primevue }" class="no-underline">
       <NavSideBarTab :selected="selected" class="justify-start">
         <IconPrime :class="{ 'text-emerald-100': selected }" class="text-cyan-500 group-hover:text-emerald-100" size="24" />
-        <NavSideBarText v-if="!collapsed" :selected="selected">
+        <NavSideBarText v-if="!isCollapsed" :selected="selected">
           PrimeVue
         </NavSideBarText>
       </NavSideBarTab>

@@ -1,15 +1,14 @@
 <script lang="ts" setup>
+  import { storeToRefs } from 'pinia'
   import { computed } from 'vue'
   import { useRoute } from 'vue-router'
   import IconSignature from '@primeicons/vue/signature';
   import NavSideBarTab from '@/components/NavSideBarTab.vue'
   import NavSideBarText from '@/components/NavSideBarText.vue'
-  import type { NavSideBarState } from '@/components/NavSideBar.vue'
   import { RouteNames } from '@/router/types'
+  import { useNavSideBarStore } from '@/stores/navSideBar'
 
-  withDefaults(defineProps<NavSideBarState>(), {
-    collapsed: false,
-  })
+  const { isCollapsed } = storeToRefs(useNavSideBarStore())
 
   const route = useRoute()
 
@@ -21,7 +20,7 @@
     <RouterLink :to="{ name: RouteNames.inputs }" class="no-underline">
       <NavSideBarTab :selected="selected" class="justify-start">
         <IconSignature :class="{ 'text-emerald-100': selected }" class="text-cyan-500 group-hover:text-emerald-100" size="24" />
-        <NavSideBarText v-if="!collapsed" :selected="selected">
+        <NavSideBarText v-if="!isCollapsed" :selected="selected">
           Custom Inputs
         </NavSideBarText>
       </NavSideBarTab>
